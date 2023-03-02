@@ -39,6 +39,7 @@ app.get('/products', async (req, res) => {
 
 app.listen(port, async () => {
     console.log(`Server is running in port ${port}`)
+    console.log(`Connecting to database: ${process.env.MONGO_URL}`)
     await mongoose.connect(process.env.MONGO_URL, {
         authSource: "admin",
         user: process.env.MONGO_USERNAME,

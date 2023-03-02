@@ -6,7 +6,9 @@
   "author": "Carlos Pérez",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node index.js"
+    "server": "node dist/index.js",
+    "build": "babel src --out-dir dist",
+    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node src/index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",

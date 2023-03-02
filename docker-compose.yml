@@ -1,0 +1,30 @@
+version: '3.4'
+
+services:
+  db:
+    image: mongo:3.6.8
+    ports:
+      - '27017:27017'
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: productListUser
+      MONGO_INITDB_ROOT_PASSWORD: productListPassword
+      MONGO_INITDB_DATABASE: promotions
+    
+  mongo_seed:
+    build: ./database
+    depends_on:
+      - db
+    restart: on-failure
+
+  # rest-api-node:
+  #   build: ./backend
+  #   ports:
+  #     - '3000:3000'
+  #   depends_on:
+  #     - db
+  #   links:
+  #     - db
+  #   restart: on-failure
+
+  
