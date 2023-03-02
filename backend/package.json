@@ -1,0 +1,25 @@
+{
+  "name": "palindromo-test",
+  "version": "1.0.0",
+  "description": "Test for Acueducto Studio",
+  "main": "index.js",
+  "author": "Carlos Pérez",
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.21.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.20.2",
+    "nodemon": "^2.0.20"
+  }
+}
